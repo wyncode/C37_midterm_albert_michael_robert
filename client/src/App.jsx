@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppContextProvider } from './context/AppContext';
-
+import './assets/styles/styles.css';
 import './App.css';
 import Brewskis from './components/Brewskis';
 import Nbar from './components/Nbar';
