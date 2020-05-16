@@ -3,13 +3,16 @@ import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
 
 import './App.css';
-import Brewskis from './components/Brewskis';
+import SearchForm from './components/SearchForm';
 import Nbar from './components/Nbar';
+import AllBreweries from './components/AllBreweries';
+
 const App = () => {
   return (
     <AppContextProvider>
       <Nbar />
-      <Brewskis />
+      <SearchForm />
+      <AllBreweries />
     </AppContextProvider>
   );
 };

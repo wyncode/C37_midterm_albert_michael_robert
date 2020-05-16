@@ -9,6 +9,7 @@ router.get('/api/brewskis', async (request, response) => {
   const myArray = [];
   data.map((brewery) => {
     const myObject = {
+      id: brewery.id,
       name: brewery.name,
       type: brewery.brewery_type,
       street: brewery.street,
@@ -21,6 +22,11 @@ router.get('/api/brewskis', async (request, response) => {
     myArray.push(myObject);
   });
   response.json(myArray);
+});
+
+router.get('/api/brewskis/:id', async (request, response) => {
+  let {data} = await axios.get(`https://api.openbrewerydb.org/breweries/${req.params.id}`)
+  response.send(data);
 });
 
 module.exports = router;

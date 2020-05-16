@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
+import AllBreweries from './AllBreweries';
 
-const Brewskis = () => {
+const SearchForm = () => {
   const [breweries, setBreweries] = useState([]);
   const [search, setSearch] = useState('');
   const handleSubmit = (event) => {
@@ -14,11 +15,14 @@ const Brewskis = () => {
       });
   };
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <input type="text" onChange={(event) => setSearch(event.target.value)} />
       <button type="submit">Submit</button>
     </form>
+    <AllBreweries data={breweries} />
+    </>
   );
 };
 
-export default Brewskis;
+export default SearchForm;
