@@ -4,18 +4,17 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [contextMessage, setContextMessage] = useState('');
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
 
   const contextMethod = () => {
     setContextMessage('Hello from client/src/context/AppContext.jsx');
   };
 
-
-  
   return (
     <AppContext.Provider
       value={{
-        search, setSearch
+        search,
+        setSearch
       }}
     >
       {children}
