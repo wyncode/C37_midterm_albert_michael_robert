@@ -14,10 +14,19 @@ const Brewskis = () => {
       });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" onChange={(event) => setSearch(event.target.value)} />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="forum-div">
+      <form className="search-input" onSubmit={handleSubmit}>
+        <input
+          placeholder="Enter city..."
+          type="text"
+          onChange={(event) => setSearch(event.target.value)}
+          className="form-control"
+        />
+        <button style={{ marginLeft: 'auto' }} className="button-search">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 
