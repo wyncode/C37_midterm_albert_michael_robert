@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AllBreweries from './AllBreweries'
 
 const Brewskis = () => {
   const [breweries, setBreweries] = useState([]);
@@ -14,6 +15,7 @@ const Brewskis = () => {
       });
   };
   return (
+    <>
     <div className="forum-div">
       <form className="search-input" onSubmit={handleSubmit}>
         <input
@@ -27,6 +29,8 @@ const Brewskis = () => {
         </button>
       </form>
     </div>
+    <AllBreweries data={breweries} />
+    </>
   );
 };
 
