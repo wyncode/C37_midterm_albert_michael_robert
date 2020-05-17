@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import AllBreweries from './AllBreweries';
 
-const Brewskis = () => {
+const SearchForm = () => {
   const [breweries, setBreweries] = useState([]);
   const [search, setSearch] = useState('');
   const handleSubmit = (event) => {
@@ -14,20 +15,23 @@ const Brewskis = () => {
       });
   };
   return (
-    <div className="forum-div">
-      <form className="search-input" onSubmit={handleSubmit}>
-        <input
-          placeholder="Enter city..."
-          type="text"
-          onChange={(event) => setSearch(event.target.value)}
-          className="form-control"
-        />
-        <button style={{ marginLeft: 'auto' }} className="button-search">
-          Submit
-        </button>
-      </form>
-    </div>
+    <>
+      <div className="forum-div">
+        <form className="search-input" onSubmit={handleSubmit}>
+          <input
+            placeholder="Enter city..."
+            type="text"
+            onChange={(event) => setSearch(event.target.value)}
+            className="form-control"
+          />
+          <button style={{ marginLeft: 'auto' }} className="button-search">
+            Submit
+          </button>
+        </form>
+      </div>
+      <AllBreweries data={breweries} />
+    </>
   );
 };
 
-export default Brewskis;
+export default SearchForm;
