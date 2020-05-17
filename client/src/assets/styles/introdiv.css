@@ -1,0 +1,13 @@
+.intro-div {
+  height: 500px;
+  background-image: url('../images/searchimg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid orange;
+}
+
+.welcome {
+  text-align: center;
+  color: white;
+  margin-top: 200px;
+}

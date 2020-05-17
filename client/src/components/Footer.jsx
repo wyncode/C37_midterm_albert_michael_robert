@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 const Footer = () => {
   return (
     <Navbar fixed="bottom" expand="lg" variant="dark" bg="primary">
-      <Navbar.Brand href="#">Brewskis Coppyright 2020</Navbar.Brand>
+      <Navbar.Brand href="#">Brewskis Copyright 2020</Navbar.Brand>
     </Navbar>
   );
 };
