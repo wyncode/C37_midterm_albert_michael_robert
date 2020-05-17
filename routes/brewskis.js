@@ -9,6 +9,7 @@ router.get('/api/brewskis', async (request, response) => {
   const myArray = [];
   data.map((brewery) => {
     const myObject = {
+      id: brewery.id,
       name: brewery.name,
       type: brewery.brewery_type,
       street: brewery.street,
