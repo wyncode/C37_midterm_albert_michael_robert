@@ -2,15 +2,19 @@ import React from 'react';
 import { AppContextProvider } from './context/AppContext';
 import './assets/styles/styles.css';
 import './App.css';
-import Brewskis from './components/Brewskis';
+import IntroInfo from './components/IntroInfo';
+import SearchForm from './components/SearchForm';
 import Nbar from './components/Nbar';
 import Footer from './components/Footer';
+import ContactDiv from './components/ContactDiv';
 
 const App = () => {
   return (
     <AppContextProvider>
       <Nbar />
-      <Brewskis />
+      <IntroInfo />
+      <SearchForm />
+      <ContactDiv />
       <Footer />
     </AppContextProvider>
   );

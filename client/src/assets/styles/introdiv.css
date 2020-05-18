@@ -1,0 +1,14 @@
+.intro-div {
+  height: 500px;
+  background-image: url('../images/contactimg1.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  border: 1px solid orange;
+}
+
+.welcome {
+  text-align: center;
+  color: white;
+  background-color: orange;
+  margin-top: 200px;
+}
