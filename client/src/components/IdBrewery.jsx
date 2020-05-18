@@ -30,6 +30,8 @@ const IdBrewery = () => {
         <h1>{apiData.name}</h1>
         <h2>{apiData.street}</h2>
         <h2>{apiData.city}, {apiData.state}  {zip}</h2>
+        <h2>{apiData.phone}</h2>
+        <h2>{apiData.website_url}</h2>
         
     </Container>
   )
