@@ -10,12 +10,12 @@ const IdBrewery = () => {
 
     const { id } = useParams();
 
-  const fetchIdBrewery = () => {
+  const fetchIdBrewery = () => {    
     axios.get(`/api/brewskis/${id}`)
     .then((res) => {
       console.log('id', id);
     setApiData(res.data);
-      console.log(res);
+      console.log(res.data);
       // set state here
     }).catch ((e) =>  {
         console.log(e)
