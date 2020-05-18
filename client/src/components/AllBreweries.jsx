@@ -11,7 +11,7 @@ const AllBreweries = (props) => {
                 props.data.map((brewery) => (
                     <Col lg='3'>
                     <Card key={brewery.id} style={{width:200, height:300, margin:5, overflow: "hidden"}}>
-                        <a href={`/breweries/${brewery.id}`}>
+                        <a href={`/brewskis/${brewery.id}`}>
                             <Card.Img
                                 variant="top"
                                 src={imgUrl}

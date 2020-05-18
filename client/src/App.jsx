@@ -7,15 +7,22 @@ import SearchForm from './components/SearchForm';
 import Nbar from './components/Nbar';
 import Footer from './components/Footer';
 import ContactDiv from './components/ContactDiv';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+// import AllBreweries from './components/AllBreweries';
+import IdBrewery from './components/IdBrewery';
+
 
 const App = () => {
   return (
     <AppContextProvider>
-      <Nbar />
-      <IntroInfo />
-      <SearchForm />
-      <ContactDiv />
-      <Footer />
+      <Router>
+        <Nbar />
+        <IntroInfo />
+        <SearchForm />
+        <Route path="/brewskis/:id" component={IdBrewery}/>
+        <ContactDiv />
+        <Footer />
+      </Router>
     </AppContextProvider>
   );
 };

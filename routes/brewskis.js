@@ -24,4 +24,9 @@ router.get('/api/brewskis', async (request, response) => {
   response.json(myArray);
 });
 
+router.get('/api/brewskis/:id', async (req, response) => {
+  let {data} = await axios.get(`https://api.openbrewerydb.org/breweries/${req.params.id}`)
+  response.send(data);
+})
+
 module.exports = router;
