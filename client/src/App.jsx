@@ -18,7 +18,8 @@ const App = () => {
       <Router>
         <Nbar />
         <IntroInfo />
-        <SearchForm />
+        {/* <SearchForm /> */}
+        <Route exact path="/" component={SearchForm}/>
         <Route path="/brewskis/:id" component={IdBrewery}/>
         <ContactDiv />
         <Footer />
