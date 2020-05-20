@@ -1,11 +1,13 @@
 import React from 'react';
 import { Navbar, Form, Button, Nav, FormControl } from 'react-bootstrap';
 
+import '../App.css';
+
 const Nbar = () => {
   return (
-    <Navbar bg="primary" variant="dark">
+    <Navbar className="bg-color" variant="light">
       <Navbar.Brand href="/">Brewskis</Navbar.Brand>
-      <Nav className="mr-auto">
+      <Nav className="ml-auto">
         <Nav.Link href="#home">About Us</Nav.Link>
         <Nav.Link href="#pricing">Contact Us</Nav.Link>
       </Nav>
