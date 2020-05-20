@@ -6,13 +6,17 @@ const Brewskis = () => {
   const [search, setSearch] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`/api/brewskis?search=${search}`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((res) => {
-        setBreweries(res);
-      });
+   
+
+    fetch(`/api/brewskis?search=${search}`).then(data => {
+      return data.json()
+    }).then(res => {
+      console.log(res)
+      setBreweries(res)
+    })
+
+    
+
   };
   return (
     <>
@@ -24,7 +28,7 @@ const Brewskis = () => {
           onChange={(event) => setSearch(event.target.value)}
           className="form-control"
         />
-        <button style={{ marginLeft: 'auto' }} className="button-search">
+        <button style={{ marginRight: 'auto' }} className="button-search">
           Submit
         </button>
       </form>
