@@ -11,30 +11,27 @@ const IdBrewery = () => {
     const { id } = useParams();
 
   const fetchIdBrewery = () => {    
-    axios.get(`/api/brewskis/${id}`)
-    .then((res) => {
-      console.log('id', id);
-    setApiData(res.data);
-      console.log(res.data);
-      // set state here
-    }).catch ((e) =>  {
-        console.log(e)
-    });
-  };
-
+    fetch(`/api/${id}`)
+    .then(res => res.json())
+    .then(data => setApiData(data))
+    .catch(error => console.log(error.message))
   // const phone = () => {
   //   return apiData.phone.split("")[0];
-  // }
+  }
 
-  useEffect(fetchIdBrewery, []);
+  useEffect(() => {
+    fetchIdBrewery()
+  },[]);
+
+  console.log(apiData)
   return (
     // <Container>
     <div id="idBrew">
         <h1>{apiData.name}</h1>
-        <h3>{apiData.street}</h3>
-        <h3>{apiData.city}, {apiData.state}  {apiData.postal_code && apiData.postal_code.split("-")[0]}</h3>
+        <h3>{apiData.location && apiData.location.address1}</h3>
+        <h3>{apiData.location && apiData.location.city}, {apiData.location && apiData.location.state}  {apiData.location && apiData.location.zip_code}</h3>
         <h3>{apiData.phone ? apiData.phone : "No Phone available" }</h3>
-        <h3><a href={apiData.website_url} target="_blank">Website</a></h3>
+        <h3><a href={apiData.url} target="_blank">Website</a></h3>
     </div>  
     // </Container>
   )
