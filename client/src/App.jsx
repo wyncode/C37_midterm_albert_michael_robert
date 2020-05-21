@@ -10,7 +10,7 @@ import ContactDiv from './components/ContactDiv';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import AllBreweries from './components/AllBreweries';
 import IdBrewery from './components/IdBrewery';
-import About from './components/About';
+// import About from './components/About';
 
 const App = () => {
   return (
