@@ -29,7 +29,6 @@ const IdBrewery = () => {
   //  setLoader(!loader)
   // },[apiData]);
 
-  console.log(apiData)
   return (
     
     <div id="layoutIdBrewery">

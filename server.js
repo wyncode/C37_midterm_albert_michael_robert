@@ -1,11 +1,13 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
-
 const express = require('express');
 const path = require('path');
 const app = express();
 const brewskisRouter = require("./routes/brewskis")
+
+app.use(express.json())
+app.use(brewskisRouter)
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -15,10 +17,6 @@ if (process.env.NODE_ENV === 'production') {
     response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }
-
-app.use(express.json())
-
-app.use(brewskisRouter)
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
