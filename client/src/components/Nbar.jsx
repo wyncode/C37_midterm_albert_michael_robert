@@ -8,8 +8,7 @@ const Nbar = () => {
     <Navbar className="bg-color" variant="light">
       <Navbar.Brand href="/">Brewskis</Navbar.Brand>
       <Nav className="ml-auto">
-        <Nav.Link href="#home">About Us</Nav.Link>
-        <Nav.Link href="#pricing">Contact Us</Nav.Link>
+        <Nav.Link href="#"> Drink Locally!</Nav.Link>
       </Nav>
     </Navbar>
   );

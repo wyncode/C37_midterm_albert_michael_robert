@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin-left: 125px;
+}
+
 .contact-div {
   height: 800px;
-  background-color: lightgoldenrodyellow;
-  /* background-image: url('../images/contactimg3.png'); */
+  /* background-color: lightgoldenrodyellow; */
+  background-image: url('../images//contactimgorange.jpg');
   display: flex;
   justify-content: center;
 }
@@ -33,6 +37,7 @@ textarea {
   text-align: start;
   margin-top: 10px;
   border: 2px solid orange;
+  width: 500px;
 }
 
 input.contact-input {
@@ -76,4 +81,5 @@ input.contact-message {
   z-index: 1;
   margin-top: 10px;
   border: 2px solid orange;
+  margin-left: 150px;
 }
