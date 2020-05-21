@@ -1,0 +1,17 @@
+.about-main {
+  align-content: center;
+}
+
+.threeOfUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.coders {
+  border: 1px solid black;
+}
+
+.coders img {
+    max-width: 100px;
+    max height: 100px;
+}

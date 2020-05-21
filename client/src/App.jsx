@@ -7,10 +7,10 @@ import SearchForm from './components/SearchForm';
 import Nbar from './components/Nbar';
 import Footer from './components/Footer';
 import ContactDiv from './components/ContactDiv';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import AllBreweries from './components/AllBreweries';
 import IdBrewery from './components/IdBrewery';
-
+import About from './components/About';
 
 const App = () => {
   return (
@@ -18,9 +18,9 @@ const App = () => {
       <Router>
         <Nbar />
         <IntroInfo />
-        {/* <SearchForm /> */}
-        <Route exact path="/" component={SearchForm}/>
-        <Route path="/brewskis/:id" component={IdBrewery}/>
+        <Route exact path="/" component={SearchForm} />
+        <Route path="/brewskis/:id" component={IdBrewery} />
+        {/* <Route exact path="/about" component={About} /> */}
         <ContactDiv />
         <Footer />
       </Router>
