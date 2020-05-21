@@ -26,9 +26,7 @@ const ContactDiv = () => {
               className="contact-message"
               name="message"
               placeholder="Your Message"
-            >
-              {' '}
-            </textarea>
+            ></textarea>
           </div>
           <div>
             <button className="contact-button">Send</button>
